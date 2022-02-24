@@ -8,6 +8,7 @@
         {{ todo }}<button @click="remove">X</button>
       </li>
     </ul>
+    <div>{{ getListLength }}</div>
   </div>
 </template>
 
@@ -29,5 +30,11 @@ export default {
       this.todos.splice(index, 1);
     },
   },
+  computed: {
+    getListLength() {
+      return this.todos.length;
+    },
+  },
 };
 </script>
+<style lang=""></style>
